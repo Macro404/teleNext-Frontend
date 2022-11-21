@@ -1,10 +1,8 @@
 import Phone from "./(components)/Phone";
 import Subscription from "./(components)/Subscription";
-import { useLocation } from 'react-router-dom';
 
 
 export default function Home({products}){
-    const location = useLocation;
 
     return <h1>Here goes content</h1>
 }
