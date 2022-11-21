@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/ba5a966b-d80d-4350-ac08-cfd0e5de74ca/AppServices/subscriptions/ba5a966b-d80d-4350-ac08-cfd0e5de74ca/resourceGroups/secondAppResourceGroup/providers/Microsoft.Web/sites/telenext",
+    "appService.deploySubpath": "."
+}
