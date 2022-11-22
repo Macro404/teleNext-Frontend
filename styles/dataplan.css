@@ -1,0 +1,9 @@
+.dataplan-container{
+    border: 2px solid black;
+    padding:5px;
+    margin:10px;
+    border-radius: 20px;
+}
+.dataplan-container :hover{
+    border-color: #b0eff0;
+}

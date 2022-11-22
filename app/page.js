@@ -1,5 +1,5 @@
-import Phone from "./(components)/Phone";
-import Subscription from "./(components)/Subscription";
+import HomepagePhone from "./(components)/homepagePhone";
+import Dataplan from "./(components)/dataplans";
 import '../styles/layout.css'
 
 
@@ -9,18 +9,22 @@ export default async function Home(){
 
     const phones = products.phones.map(phone => {
         return (
-            <Phone key={phone.id}
+            <HomepagePhone key={phone.id}
             model={phone.model}
             price={phone.price}
-            camera={phone.model}
-            cpu={phone.cpu}
-            battery={phone.battery}
-            screen={phone.screen}
-            images={phone.images}></Phone>
-    )})
+            images={phone.images}></HomepagePhone>
+    )});
+
+    const dataplans = products.dataPlans.map(dataplan => {
+        return (<Dataplan key={dataplan.id} 
+            rate={dataplan.rate} 
+            data={dataplan.data}>
+            </Dataplan>)
+    });
 
     return (<div>
-        <div className="subscriptions-container">
+        <div className="dataplans-container">
+            {dataplans}
         </div>
         <div className="phones-container">
         {phones[0]}
