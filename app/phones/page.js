@@ -7,13 +7,13 @@ export default async function Phones(){
             <Phone key={phone.id}
             model={phone.model}
             price={phone.price}
-            camera={phone.model}
+            camera={phone.camera}
             cpu={phone.cpu}
             battery={phone.battery}
             screen={phone.screen}
             images={phone.images}></Phone>
     )})
-    
+
     return <div>
         {phones}
     </div>
