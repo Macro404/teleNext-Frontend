@@ -1,5 +1,27 @@
-export default function AboutUs(){
+import Phone from "../(components)/Phone";
+export default async function Phones(){
+    const products = await fetchProducts();
+
+    const phones = products.phones.map(phone => {
+        return (
+            <Phone key={phone.id}
+            model={phone.model}
+            price={phone.price}
+            camera={phone.model}
+            cpu={phone.cpu}
+            battery={phone.battery}
+            screen={phone.screen}
+            images={phone.images}></Phone>
+    )})
+    
     return <div>
-        <h1>A bunch of phones</h1>
+        {phones}
     </div>
+}
+
+async function fetchProducts(){
+    const res = await fetch('https://doubleshot-app.azurewebsites.net/api/  ');
+    const json = await res.json();
+    console.log(json)
+    return json;
 }

@@ -1,29 +1,30 @@
 import Link from "next/link";
+import '../styles/layout.css'
 
-export default function RootLayout({ children, products }) {
+export default function RootLayout({ children}) {
 
 
     return (
       <html lang="en">
         <body>
-            <header>
-                <Link href='/' className="home-link">
-                <h1>teleNext</h1>
-                </Link>
-            </header>
             <nav className="nav-bar">
-            <Link href='/phones' className="phones-link">
+            <Link href='/' className="home-link">
+            <h1>teleNext</h1>
+            </Link>
+            <Link href='/phones' className="phones-link link">
             <h1>Phones</h1>
             </Link>
-            <Link href='/about_us' className="about-us-link">
+            <Link href='/about_us' className="about-us-link link">
             <h1>About us</h1>
             </Link>
-            <Link href='/faq' className="faq-link">
+            <Link href='/faq' className="faq-link link">
             <h1>FAQ</h1>
             </Link>
             </nav>
-            {children}
-
+            
+            <main className="main-container">
+                {children}
+            </main>
             <footer></footer>
             </body>
       </html>
