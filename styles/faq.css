@@ -1,0 +1,37 @@
+.faq-container{
+    width: 300px;
+}
+.faq-question{
+    margin: 10px;
+}
+.faq-question :hover{
+    cursor: pointer;
+}
+details > summary {
+    list-style: none;
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+details > summary::-webkit-details-marker {
+    display: none;
+}
+@media screen and (min-width: 576px) {
+    .faq-container{
+        width: 500px;
+    }
+}
+@media screen and (min-width: 768px) {
+    .faq-container{
+        width: 600px;
+    }    
+}
+@media screen and (min-width: 992px) {
+    .faq-container{
+        width: 700px;
+    }   
+}
+@media screen and (min-width: 1200px) {
+    .faq-container{
+        width: 800px;
+    }   
+}

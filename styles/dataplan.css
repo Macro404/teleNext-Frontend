@@ -1,9 +1,23 @@
 .dataplan-container{
-    border: 2px solid black;
     padding:5px;
     margin:10px;
-    border-radius: 20px;
+    border-radius: 100px;
+    background-color: aliceblue;
+    text-align: center;
+    box-shadow: 1px 1px 2px 1px #66cec0;
 }
 .dataplan-container :hover{
-    border-color: #b0eff0;
+    cursor: pointer;
+}
+@media screen and (min-width: 576px) {
+    
+}
+@media screen and (min-width: 768px) {
+    
+}
+@media screen and (min-width: 992px) {
+    
+}
+@media screen and (min-width: 1200px) {
+    
 }

@@ -34,8 +34,11 @@ export default function RootLayout({ children}) {
             <main className="main-container">
                 {children}
             </main>
-            <footer></footer>
             </Providers>
+            <footer className="footer">
+                <a className="github-link" href="https://github.com/Macro404/">Marcus Westlund@github</a>
+                <a className="github-link" href="https://github.com/michaelvedestig/">Michael Vedestig@github</a>
+            </footer>
             </body>
       </html>
     );
