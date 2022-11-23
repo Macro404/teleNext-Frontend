@@ -81,14 +81,12 @@ footer{
 
 @media screen and (min-width: 768px) {
   .dataplans-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    width: 650px;
+    display: flex;
+    width: 500px;
   }
   .phones-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    width: 650px;
+    display: flex;
+    width: 500px;
   }
   footer{
     height: 60px;
@@ -104,9 +102,13 @@ footer{
 
 @media (min-width: 992px) {
   .dataplans-container{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
     width: 840px;
   }
   .phones-container{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
     width: 840px;
   }
   footer{
