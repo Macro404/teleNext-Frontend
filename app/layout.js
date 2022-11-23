@@ -2,6 +2,8 @@ import Link from "next/link";
 import '../styles/layout.css'
 import LoginBtn from "./(components)/LoginBtn";
 import Providers from "./(components)/Providers";
+import { SessionProvider } from 'next-auth/react'
+
 
 export default function RootLayout({ children}) {
 
@@ -27,18 +29,20 @@ export default function RootLayout({ children}) {
             <h1>FAQ</h1>
             </Link>
             <LoginBtn>
-              <Link href='/account' className="account-link link">My Page</Link>
+              <Link href='/account' className="account-link link">
+                <h1>My page</h1>
+            </Link>
             </LoginBtn>
             </nav>
             
             <main className="main-container">
-                {children}
+            {children}
             </main>
-            </Providers>
             <footer className="footer">
                 <a className="github-link" href="https://github.com/Macro404/">Marcus Westlund@github</a>
                 <a className="github-link" href="https://github.com/michaelvedestig/">Michael Vedestig@github</a>
             </footer>
+            </Providers>
             </body>
       </html>
     );

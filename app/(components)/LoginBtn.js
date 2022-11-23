@@ -6,11 +6,12 @@ export default function LoginBtn({ children }) {
   const { data: session } = useSession();
   if (session) {
     return (
-      <div>
-        Signed in as {session.user.email} <br />
+      <>
+        {session.user.name}
+        {/* <UserInformation data={session.user} /> */}
         <button onClick={() => signOut()}>Sign out</button>
         {children}
-      </div>
+      </>
     );
   }
   return (

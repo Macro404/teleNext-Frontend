@@ -1,7 +1,7 @@
 import HomepagePhone from "./(components)/homepagePhone";
 import Dataplan from "./(components)/dataplans";
-import '../styles/layout.css'
-
+import '../styles/layout.css';
+import LoginBtn from "./(components)/LoginBtn";
 
 export default async function Home(){
 
@@ -22,7 +22,9 @@ export default async function Home(){
             </Dataplan>)
     });
 
-    return (<div>
+    return (
+    
+    <div>
         <div className="dataplans-container">
             {dataplans}
         </div>
