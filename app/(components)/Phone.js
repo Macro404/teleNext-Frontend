@@ -21,6 +21,7 @@ export default function Phone({ model, price, camera, cpu, battery, screen, imag
         <p>{battery}</p>
         <p>{screen}</p>
         <p>{price}:-</p>
+        <button>🛒</button>
         </div>
     </div>
 }

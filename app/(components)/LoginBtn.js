@@ -15,7 +15,6 @@ export default function LoginBtn({ children }) {
   }
   return (
     <>
-      Not signed in <br />
       <button onClick={() => signIn()}>Sign in</button>
     </>
   );

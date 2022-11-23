@@ -36,8 +36,7 @@ export default async function Home(){
 }
 
 async function fetchProducts(){
-    const res = await fetch('https://doubleshot-app.azurewebsites.net/api/  ');
+    const res = await fetch('https://doubleshot-app.azurewebsites.net/api/');
     const json = await res.json();
-    console.log(json)
     return json;
 }

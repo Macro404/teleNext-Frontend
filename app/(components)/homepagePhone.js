@@ -17,6 +17,7 @@ export default function HomepagePhone({ model, price, images}){
         <div className='phone-details'>
         <h3>{model}</h3>
         <p>{price}:-</p>
+        <button>🛒</button>
         </div>
     </div>)
 }
