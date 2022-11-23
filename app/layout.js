@@ -29,8 +29,8 @@ export default function RootLayout({ children}) {
                 {children}
             </main>
             <footer className="footer">
-                <a className="github-link" href="https://github.com/Macro404/">Marcus Westlund</a>
-                <a className="github-link" href="https://github.com/michaelvedestig/">Michael Vedestig</a>
+                <a className="github-link" href="https://github.com/Macro404/">Marcus Westlund@github</a>
+                <a className="github-link" href="https://github.com/michaelvedestig/">Michael Vedestig@github</a>
             </footer>
             </body>
       </html>

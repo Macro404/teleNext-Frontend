@@ -35,8 +35,9 @@ body{
     align-items: center;
     padding-top:70px;
     width: 100%;
-    background-color: #ffffff;
     min-height: 80vh;
+    background: rgb(226,224,228);
+background: linear-gradient(90deg, rgb(217, 240, 240) 0%, rgb(255, 255, 255) 50%, rgb(217, 240, 240) 100%);
 }
 .phones-container{
     display: grid;
@@ -53,13 +54,13 @@ footer{
     height: 100px;
     width: 100vw;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
 }
 .github-link{
     text-decoration: none;
     color: white;
     font-size: 12px;
-    margin: 5px;
+    margin: 10px 20px;
     bottom: 10px;
     text-align: right;
 }

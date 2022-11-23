@@ -11,7 +11,8 @@ export default async function Phones(){
             cpu={phone.cpu}
             battery={phone.battery}
             screen={phone.screen}
-            images={phone.images}></Phone>
+            images={phone.images}
+            ></Phone>
     )})
 
     return <div>
@@ -22,6 +23,5 @@ export default async function Phones(){
 async function fetchProducts(){
     const res = await fetch('https://doubleshot-app.azurewebsites.net/api/  ');
     const json = await res.json();
-    console.log(json)
     return json;
 }
