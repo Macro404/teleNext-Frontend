@@ -1,68 +1,132 @@
 body{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin:none;
-    padding:none;
-    background-color: #262424;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin:none;
+  padding:none;
+  background-color: #262424;
 }
 .nav-bar{
-    display:flex;
-    flex-direction: row;
-    border-bottom: 4px solid #66cec0;
-    width: 100vw;
-    justify-content: center;
-    position:fixed; 
-    top:0;
-    z-index: 1;
-    background-color: #262424;
+  display:flex;
+  flex-direction: row;
+  border-bottom: 4px solid #66cec0;
+  width: 100vw;
+  justify-content: center;
+  position:fixed; 
+  top:0;
+  z-index: 1;
+  background-color: #262424;
 }
 .link{
-    margin:0 10px;
-    text-decoration: none;
-    color:white;
-    
+  margin:0 10px;
+  text-decoration: none;
+  color:white;
 }
 .link :hover{
-    color: #b0eff0;
-}
-.home-link{
+  color: #b0eff0;
 }
 .main-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top:70px;
-    width: 100vw;
-    min-height: 80vh;
-    background: rgb(226,224,228);
-    background: linear-gradient(90deg, rgb(217, 240, 240) 0%, rgb(255, 255, 255) 50%, rgb(217, 240, 240) 100%);
-
-}
-.phones-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top:70px;
+  width: 100vw;
+  min-height: 80vh;
+  background: rgb(226,224,228);
+  background: linear-gradient(90deg, rgb(217, 240, 240) 0%, rgb(255, 255, 255) 50%, rgb(217, 240, 240) 100%);
 }
 .dataplans-container{
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  justify-content: center;
+}
+.phones-container{
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  justify-content: center;
+}
+
+footer{
+  background-color: #262424;
+  height: 30px;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.github-link{
+  text-decoration: none;
+  color: white;
+  font-size: 12px;
+  margin: 5px 10px;
+  bottom: 10px;
+  text-align: right;
+}
+
+@media (min-width: 576px) {
+  .dataplans-container{
+    display: flex;
+    width: 400px;
+  }
+  .phones-container{
+    display: flex;
+    width: 400px;
+  }
+}
+
+@media (min-width: 768px) {
+  .dataplans-container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    width: 1000px;
-}
-footer{
-    background-color: #262424;
-    height: 90px;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-}
-.github-link{
+    width: 500px;
+  }
+  .phones-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 500px;
+  }
+  footer{
+    height: 60px;
+  }
+  .github-link{
     text-decoration: none;
     color: white;
     font-size: 12px;
-    margin: 10px 20px;
+    margin: 5px 10px;
     bottom: 10px;
-    text-align: right;
+  }
+}
+
+@media (min-width: 992px) {
+  .dataplans-container{
+    width: 840px;
+  }
+  .phones-container{
+    width: 840px;
+  }
+  footer{
+    height: 70px;
+  }
+  .github-link{
+  }
+}
+
+@media (min-width: 1200px) {
+  .phones-container{
+    width: 1000px;
+  }
+  .dataplans-container{
+    width: 1000px;
+  }
+  .footer{
+    height:80px;
+  }
+
+  .github-link{
+  }
 }
