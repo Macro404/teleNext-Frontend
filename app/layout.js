@@ -1,5 +1,7 @@
 import Link from "next/link";
 import '../styles/layout.css'
+import LoginBtn from "./(components)/LoginBtn";
+import Providers from "./(components)/Providers";
 
 export default function RootLayout({ children}) {
 
@@ -10,6 +12,7 @@ export default function RootLayout({ children}) {
         <meta name="google-site-verification" content="VrGFXZsaLLIQTgGyxIUQ6qWYbfIYZPfVsCXZDCny4OU" />
         </head>
         <body>
+        <Providers>
             <nav className="nav-bar">
             <Link href='/' className="home-link link">
             <h1>teleNext</h1>
@@ -23,12 +26,16 @@ export default function RootLayout({ children}) {
             <Link href='/faq' className="faq-link link">
             <h1>FAQ</h1>
             </Link>
+            <LoginBtn>
+              <Link href='/account' className="account-link link">My Page</Link>
+            </LoginBtn>
             </nav>
             
             <main className="main-container">
                 {children}
             </main>
             <footer></footer>
+            </Providers>
             </body>
       </html>
     );
