@@ -52,7 +52,7 @@ body{
 
 footer{
   background-color: #262424;
-  height: 30px;
+  height: 50px;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -68,27 +68,27 @@ footer{
   text-align: right;
 }
 
-@media (min-width: 576px) {
+@media screen and (min-width: 576px) {
   .dataplans-container{
     display: flex;
-    width: 400px;
+    width: 350px;
   }
   .phones-container{
     display: flex;
-    width: 400px;
+    width: 350px;
   }
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .dataplans-container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    width: 500px;
+    width: 650px;
   }
   .phones-container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    width: 500px;
+    width: 650px;
   }
   footer{
     height: 60px;
