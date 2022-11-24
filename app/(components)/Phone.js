@@ -1,9 +1,10 @@
 import Image from 'next/image'
 import '../../styles/image.css'
 import '../../styles/phone.css'
+import CartBtn from './CartBtn';
 
-export default function Phone({ model, price, camera, cpu, battery, screen, images}){
-    const imageList = images.split(',');
+export default function Phone({ phone }){
+    const imageList = phone.images.split(',');
     return <div className='phone-container'>
         <div className='image-container' >
         <Image
@@ -15,13 +16,13 @@ export default function Phone({ model, price, camera, cpu, battery, screen, imag
     />
     </div>
     <div className='phone-details'>
-        <h3>{model}</h3>
-        <p>{camera}</p>
-        <p>{cpu}</p>
-        <p>{battery}</p>
-        <p>{screen}</p>
-        <p>{price}:-</p>
-        <button>🛒</button>
+        <h3>{phone.model}</h3>
+        <p>{phone.camera}</p>
+        <p>{phone.cpu}</p>
+        <p>{phone.battery}</p>
+        <p>{phone.screen}</p>
+        <p>{phone.price}:-</p>
+        <CartBtn item={phone}></CartBtn>
         </div>
     </div>
 }

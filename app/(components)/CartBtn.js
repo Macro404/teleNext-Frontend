@@ -1,10 +1,24 @@
+"use client";
+import '../../styles/cart.css'
 
+import CartItem from "./Cartitem";
+import React, { createElement } from "react";
 
+export default function CartBtn ({ item }) {
 
-export default function CartBtn ({ phone }) {
+  const handleClick = () => {
 
-  const handleClick () => {
-    const cart = document.getElementById('cart');
+    const cartString = localStorage.getItem('telenext');
+    if(!cartString){
+      const items = [];
+      items.push(item);
+      localStorage.setItem('telenext', JSON.stringify(items));
+      return;
+    }
+    const cartObject = JSON.parse(cartString);
+    cartObject.push(item);
+    localStorage.setItem('telenext', JSON.stringify(cartObject));
+    console.log(localStorage.getItem('telenext'));
   }
   
   return (

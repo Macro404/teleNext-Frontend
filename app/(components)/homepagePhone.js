@@ -1,9 +1,10 @@
 import Image from 'next/image'
 import '../../styles/image.css'
 import '../../styles/phone.css'
+import CartBtn from './CartBtn';
 
-export default function HomepagePhone({ model, price, images}){
-    const imageList = images.split(',');
+export default function HomepagePhone({ phone }){
+    const imageList = phone.images.split(',');
     
     return (<div className='phone-container'>
         <div className='image-container' >
@@ -15,9 +16,9 @@ export default function HomepagePhone({ model, price, images}){
             className="image"/>
         </div>
         <div className='phone-details'>
-        <h3>{model}</h3>
-        <p>{price}:-</p>
-        <button>🛒</button>
+        <h3>{phone.model}</h3>
+        <p>{phone.price}:-</p>
+        <CartBtn item={phone}/>
         </div>
     </div>)
 }

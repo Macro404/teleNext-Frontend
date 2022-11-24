@@ -1,0 +1,36 @@
+.cart_button{
+    border-radius: 10px;
+    border:1.5px solid rgb(103, 103, 156);
+    padding:3px 10px;
+    background-color: rgb(191, 241, 240);
+}
+.checkout{
+    background-color: rgb(245, 244, 244);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    min-height: 80vh;
+    border: 2px solid rgb(149, 142, 142);
+    border-radius: 10px;
+}
+@media screen and (min-width: 576px) {
+    .checkout{
+        width: 500px;
+    }
+}
+@media screen and (min-width: 768px) {
+    .checkout{
+        width: 600px;
+    }    
+}
+@media screen and (min-width: 992px) {
+    .checkout{
+        width: 700px;
+    }   
+}
+@media screen and (min-width: 1200px) {
+    .checkout{
+        width: 800px;
+    }
+}

@@ -2,8 +2,7 @@ import Link from "next/link";
 import '../styles/layout.css'
 import LoginBtn from "./(components)/LoginBtn";
 import Providers from "./(components)/Providers";
-import { SessionProvider } from 'next-auth/react'
-
+import Cart from "./(components)/Cart";
 
 export default function RootLayout({ children}) {
 
@@ -33,6 +32,9 @@ export default function RootLayout({ children}) {
                 <h1>My page</h1>
             </Link>
             </LoginBtn>
+            <Link href='/checkout' className="checkout-link link">
+              <h1>Checkout</h1>
+            </Link>
             </nav>
             
             <main className="main-container">

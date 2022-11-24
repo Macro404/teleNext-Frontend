@@ -1,7 +1,6 @@
 import HomepagePhone from "./(components)/homepagePhone";
 import Dataplan from "./(components)/dataplans";
 import '../styles/layout.css';
-import LoginBtn from "./(components)/LoginBtn";
 
 export default async function Home(){
 
@@ -10,20 +9,16 @@ export default async function Home(){
     const phones = products.phones.map(phone => {
         return (
             <HomepagePhone key={phone.id}
-            model={phone.model}
-            price={phone.price}
-            images={phone.images}></HomepagePhone>
+            phone={phone}></HomepagePhone>
     )});
 
     const dataplans = products.dataPlans.map(dataplan => {
         return (<Dataplan key={dataplan.id} 
-            rate={dataplan.rate} 
-            data={dataplan.data}>
-            </Dataplan>)
-    });
+            plan={dataplan}></Dataplan>
+            )});
 
     return (
-    
+
     <div>
         <div className="dataplans-container">
             {dataplans}
