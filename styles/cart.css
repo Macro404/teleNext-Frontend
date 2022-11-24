@@ -1,9 +1,16 @@
 .cart_button{
     border-radius: 10px;
     border:1.5px solid rgb(103, 103, 156);
-    padding:3px 10px;
+    padding:5px 13px;
     background-color: rgb(191, 241, 240);
 }
+.clicked{
+    background-color: rgb(156, 255, 156);
+}
+.cart_button:hover{
+    cursor: pointer;
+}
+
 .checkout{
     background-color: rgb(245, 244, 244);
     display: flex;
