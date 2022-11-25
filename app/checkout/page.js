@@ -6,7 +6,7 @@ import { useState } from 'react';
 import Payment from '../(components)/Payment';
 
 export default function Checkout (){
-  
+
     if(typeof window == 'undefined' || !localStorage.getItem('telenext')){
       return <h2>
         Cart is empty, fill it up!
@@ -38,7 +38,7 @@ export default function Checkout (){
     {cartPlans}
     <p>Total: {total}:-</p>
     <p>Monthly rate: {monthlyRate}:-</p>
-    <Payment />
+    <Payment amount={total}/>
   </div>
   )
 }

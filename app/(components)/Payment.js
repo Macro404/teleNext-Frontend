@@ -6,7 +6,7 @@ import CheckoutForm from './form';
 
 const stripe = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY);
 
-export default function Payment() {
+export default function Payment({amount}) {
   const [clientSecret, setClientSecret] = useState('');
   const [paymentIntent, setPaymentIntent] = useState('');
   useEffect(() => {
@@ -50,7 +50,7 @@ export default function Payment() {
           +
         </div>
         <div className="w-1/3 flex justify-end items-center">
-          <img src="/next.svg" alt="Stripe" />
+          <img src="/vercel.svg" alt="Stripe" />
         </div>
       </div>
       {clientSecret && (
