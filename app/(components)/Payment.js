@@ -50,7 +50,7 @@ export default function Payment({amount}) {
           +
         </div>
         <div className="w-1/3 flex justify-end items-center">
-          <img src="/vercel.svg" alt="Stripe" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg" alt="Stripe" />
         </div>
       </div>
       {clientSecret && (

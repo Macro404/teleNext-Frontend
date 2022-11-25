@@ -12,6 +12,8 @@ export default function Checkout (){
         Cart is empty, fill it up!
       </h2>
     }
+    //const [total, setTotal] = useState(0)
+    
 
   const [list, setList] = useState(JSON.parse(localStorage.getItem('telenext')))
 
@@ -29,6 +31,7 @@ export default function Checkout (){
   }
   );
   const total = phones.map((phone) => phone.price).reduce((total, a) => total + a,  0)
+  //setTotal(phones.map((phone) => phone.price).reduce((total, a) => total + a,  0));
   const monthlyRate = plans.map(plan => plan.rate).reduce((total,a) => total + a, 0);
 
   return (
