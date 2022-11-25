@@ -12,10 +12,10 @@ export default function CartItem({ item, list, setList }) {
 
   if (item.model){
     return (
-      <li className={item.id}>{item.model} {item.price} <button onClick={remove}>-</button></li>
+      <div className={item.id}><span className="itemName">{item.model}</span> <span className="price">{item.price}.00:- <button onClick={remove}>-</button></span></div>
     )
   }
   return (
-    <li className={item.id}>Plan: {item.data}/month {item.rate} <button onClick={remove}>-</button></li>
+    <div className={item.id}> <span className="itemName">Plan: {item.data}GB/month</span> <span className="price">{item.rate}.00:- <button onClick={remove}>-</button></span></div>
   )
 }
