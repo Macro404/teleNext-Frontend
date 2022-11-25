@@ -6,7 +6,8 @@ import { useState } from 'react';
 import Payment from '../(components)/Payment';
 
 export default function Checkout (){
-    if(!localStorage.getItem('telenext')){
+  
+    if(typeof window == 'undefined' || !localStorage.getItem('telenext')){
       return <h2>
         Cart is empty, fill it up!
       </h2>
