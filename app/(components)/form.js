@@ -4,10 +4,13 @@ import {
   useStripe,
   useElements,
 } from '@stripe/react-stripe-js';
+import { useSession} from "next-auth/react";
 
-export default function Form(paymentIntent) {
-  const [email, setEmail] = useState('');
-  const [locAmount, setLocAmount] = useState('300');
+
+export default function Form({paymentIntent, amount}) {
+  const { data: session } = useSession();
+  const [email, setEmail] = useState(session.user.email);
+  const [locAmount, setLocAmount] = useState(amount);
   const [message, setMessage] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const stripe = useStripe();

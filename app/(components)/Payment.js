@@ -15,7 +15,7 @@ export default function Payment({amount}) {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        amount: 30000,
+        amount: amount,
         payment_intent_id: '',
       }),
     })
@@ -55,7 +55,7 @@ export default function Payment({amount}) {
       </div>
       {clientSecret && (
         <Elements options={options} stripe={stripe}>
-          <CheckoutForm paymentIntent={paymentIntent} />
+          <CheckoutForm paymentIntent={paymentIntent} amount={amount} />
         </Elements>
       )}
     </div>
