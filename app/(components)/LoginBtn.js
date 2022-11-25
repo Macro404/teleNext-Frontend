@@ -7,7 +7,7 @@ export default function LoginBtn({ children }) {
   if (session) {
     return (
       <>
-        {session.user.name}
+        {/*session.user.name*/}
         {/* <UserInformation data={session.user} /> */}
         <button onClick={() => signOut()} className="sign-button">Sign out</button>
         {children}
