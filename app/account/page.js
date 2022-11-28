@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Account(){
   const {data: session, status } = useSession({required: true});
-  fetch (process.env.NEXTAUTH_URL + '/api/users/')
+  //fetch (process.env.NEXTAUTH_URL + '/api/users/')
 
   if (status === 'authenticated') {
     return (
