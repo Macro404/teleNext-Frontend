@@ -6,7 +6,7 @@ import CheckoutForm from './form';
 
 const stripe = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY);
 
-export default function Payment({amount}) {
+export default function Payment({amount, productIds}) {
   const [clientSecret, setClientSecret] = useState('');
   const [paymentIntent, setPaymentIntent] = useState('');
   useEffect(() => {
@@ -55,7 +55,7 @@ export default function Payment({amount}) {
       </div>
       {clientSecret && (
         <Elements options={options} stripe={stripe}>
-          <CheckoutForm paymentIntent={paymentIntent} amount={amount} />
+          <CheckoutForm paymentIntent={paymentIntent} amount={amount} productIds={productIds}/>
         </Elements>
       )}
     </div>

@@ -10,9 +10,18 @@
 .cart_button:hover{
     cursor: pointer;
 }
+.checkout-items{
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: white;
+    border: 2px solid darkgray;
+}
 
 .checkout{
     margin-top: 10px;
+    margin-bottom:10px;
     padding-top: 20px;
     background-color: rgb(245, 244, 244);
     display: grid;
@@ -25,6 +34,7 @@
 }
 .itemName{
     float: left;
+    margin: 5px 0;
 }
 .price{
     float: right;
