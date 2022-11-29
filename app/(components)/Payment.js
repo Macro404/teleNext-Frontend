@@ -3,10 +3,11 @@ import React, { useState, useEffect } from 'react';
 import { Elements } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
 import CheckoutForm from './form';
+import Image from 'next/image';
 
 const stripe = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY);
 
-export default function Payment({amount}) {
+export default function Payment({amount, productIds}) {
   const [clientSecret, setClientSecret] = useState('');
   const [paymentIntent, setPaymentIntent] = useState('');
   useEffect(() => {
@@ -50,12 +51,12 @@ export default function Payment({amount}) {
           +
         </div>
         <div className="w-1/3 flex justify-end items-center">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg" alt="Stripe" />
+          <Image src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg" width={110} height={55} alt="Stripe" />
         </div>
       </div>
       {clientSecret && (
         <Elements options={options} stripe={stripe}>
-          <CheckoutForm paymentIntent={paymentIntent} amount={amount} />
+          <CheckoutForm paymentIntent={paymentIntent} amount={amount} productIds={productIds}/>
         </Elements>
       )}
     </div>

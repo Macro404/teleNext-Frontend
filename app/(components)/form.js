@@ -6,8 +6,19 @@ import {
 } from '@stripe/react-stripe-js';
 import { useSession} from "next-auth/react";
 
+const requestFromApi = (productIds) => {
+  fetch(`api/users/${userId}/transactions`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json',
+                'web-token' : process.env.JWT_SECRET },
+    body: JSON.stringify(productIds),
+  })
+    .then((res) => res.json())
+    .then((data) => console.log(data))
+}
 
-export default function Form({paymentIntent, amount}) {
+
+export default function Form({paymentIntent, amount, productIds}) {
   const { data: session } = useSession();
   const [email, setEmail] = useState(session.user.email);
   const [locAmount, setLocAmount] = useState(amount);
@@ -34,6 +45,7 @@ export default function Form({paymentIntent, amount}) {
       switch (paymentIntent.status) {
         case 'succeeded':
           setMessage('Payment succeeded!');
+          requestFromApi(productIds);
           break;
         case 'processing':
           setMessage('Your payment is processing.');
@@ -74,7 +86,7 @@ export default function Form({paymentIntent, amount}) {
     const { error } = await stripe.confirmPayment({
       elements,
       confirmParams: {
-        return_url: 'http://localhost:3000/',
+        return_url: `${process.env.NEXTAUTH_URL}/account`,
         receipt_email: email,
         shipping: {
           address: { city: 'NY' },

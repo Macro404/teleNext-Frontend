@@ -5,11 +5,17 @@ import { useSession, signIn, signOut } from "next-auth/react";
 export default function LoginBtn({ children }) {
   const { data: session } = useSession();
   if (session) {
+    
+    //redirect.then(result => console.log(result))
+
     return (
       <>
         {/*session.user.name*/}
         {/* <UserInformation data={session.user} /> */}
-        <button onClick={() => signOut()} className="sign-button">Sign out</button>
+        <button onClick={() => signOut({
+          callbackUrl: `${window.location.origin}`
+        }
+      )} className="sign-button">Sign out</button>
         {children}
       </>
     );
