@@ -6,19 +6,17 @@ import {
 } from '@stripe/react-stripe-js';
 import { useSession} from "next-auth/react";
 
-const requestFromApi = (productIds) => {
-  fetch(`api/users/${userId}/transactions`, {
+const requestFromApi = (productIds, userId) => {
+  fetch(`http://localhost:8080/api/users/${userId}/transactions`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json',
-                'web-token' : process.env.JWT_SECRET },
+                'web_token' : process.env.JWT_SECRET },
     body: JSON.stringify(productIds),
   })
-    .then((res) => res.json())
-    .then((data) => console.log(data))
 }
 
 
-export default function Form({paymentIntent, amount, productIds}) {
+export default function Form({paymentIntent, amount, productIds, userId}) {
   const { data: session } = useSession();
   const [email, setEmail] = useState(session.user.email);
   const [locAmount, setLocAmount] = useState(amount);
@@ -45,7 +43,6 @@ export default function Form({paymentIntent, amount, productIds}) {
       switch (paymentIntent.status) {
         case 'succeeded':
           setMessage('Payment succeeded!');
-          requestFromApi(productIds);
           break;
         case 'processing':
           setMessage('Your payment is processing.');
@@ -74,7 +71,9 @@ export default function Form({paymentIntent, amount, productIds}) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    console.log("anything");
+    requestFromApi(productIds, userId);
+    localStorage.removeItem('telenext');
     if (!stripe || !elements) {
       console.log('not loaded');
       // Stripe.js has not yet loaded.
@@ -127,7 +126,7 @@ export default function Form({paymentIntent, amount, productIds}) {
             placeholder="Enter email address"
           />
         </div>
-        <div className="mb-6">
+        <div className="mb-3">
           Email address:
           <input
             className="block

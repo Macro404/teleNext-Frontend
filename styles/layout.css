@@ -82,6 +82,9 @@ footer{
 .shopping-cart-image{
   margin-top:10px;
 }
+.checkout-link{
+  margin: auto 30px;
+}
 
 @media screen and (min-width: 576px) {
   .dataplans-container{
@@ -130,6 +133,11 @@ footer{
     height: 70px;
   }
   .github-link{
+  }
+
+  .link{
+    display:inline;
+    margin: 0 20px;
   }
 }
 

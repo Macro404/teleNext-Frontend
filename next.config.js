@@ -16,6 +16,9 @@ const nextConfig = {
       STRIPE_API_KEY: process.env.STRIPE_API_KEY,
       GOOGLE_ANALYTICS: process.env.GOOGLE_ANALYTICS,
       JWT_SECRET: process.env.JWT_SECRET,
+      NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY: process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY,
+      STRIPE_SECRET_KEY: process.env.STRIPE_SECRET_KEY,
+      NEXTAUTH_URL : process.env.NEXTAUTH_URL
   },
 }
 

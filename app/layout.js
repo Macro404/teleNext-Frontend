@@ -29,7 +29,7 @@ export default function RootLayout({ children}) {
             <h1>FAQ</h1>
             </Link>
             <LoginBtn>
-              <Link href='/account' className="account-link">
+              <Link href='/account' className="account-link link">
                 <h1>My page</h1>
             </Link>
             </LoginBtn>

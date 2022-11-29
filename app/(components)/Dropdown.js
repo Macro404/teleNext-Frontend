@@ -7,8 +7,15 @@ export default function Dropdown() {
   return (
     <div className="dropdown-menu">
     <Menu>
-      <Menu.Button>More</Menu.Button>
+      <Menu.Button>Menu</Menu.Button>
       <Menu.Items>
+      <Menu.Item>
+          {({ active }) => (
+            <Link href='/account' className="account-link dropdown-link">
+            <h1>My page</h1>
+            </Link>
+          )}
+        </Menu.Item>
         <Menu.Item>
           {({ active }) => (
             <Link href='/phones' className="phones-link dropdown-link">
@@ -29,9 +36,6 @@ export default function Dropdown() {
             <h1>FAQ</h1>
             </Link>
           )}
-        </Menu.Item>
-        <Menu.Item disabled>
-          <span className="opacity-75">Invite a friend (coming soon!)</span>
         </Menu.Item>
       </Menu.Items>
     </Menu>

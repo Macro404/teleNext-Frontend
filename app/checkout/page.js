@@ -10,6 +10,7 @@ import { useRouter } from 'next/navigation';
 export default function Checkout (){
   const {data: session, status } = useSession({required: true});
   const router = useRouter();
+  const [userId, setUserId] = useState('');
 
   if(typeof window == 'undefined' || !localStorage.getItem('telenext') || localStorage.getItem('telenext').length == 0){
     return <h2>
@@ -34,7 +35,9 @@ export default function Checkout (){
         console.log('caught')
         router.push('/signup')
       }
+      return response.json()
     })
+    .then(json => setUserId(json.id));
   
     const [list, setList] = useState(JSON.parse(localStorage.getItem('telenext')))
   
@@ -54,10 +57,9 @@ export default function Checkout (){
     const total = phones.map((phone) => phone.price).reduce((total, a) => total + a,  0)
     const monthlyRate = plans.map(plan => plan.rate).reduce((total,a) => total + a, 0);
   
-    const phoneIds = phones.map(item => item.id);
-    const planIds = plans.map(item => item.id);
-    const productIds = {phones : phoneIds, plans : planIds};
-  
+    const phoneIdList = phones.map(item => item.id);
+    const planIdList = plans.map(item => item.id);
+    const productIds = {phoneIds : phoneIdList, planIds : planIdList};
     return (
   
     <div className='checkout'>
@@ -67,7 +69,7 @@ export default function Checkout (){
       </div>
       <p>Total: {total}:-</p>
       <p>Monthly rate: {monthlyRate}:-</p>
-      <Payment amount={total} productIds={productIds}/>
+      <Payment amount={42069} productIds={productIds} userId={userId}/>
     </div>
     )
   }

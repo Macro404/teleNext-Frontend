@@ -4,6 +4,9 @@
     padding:5px 13px;
     background-color: rgb(191, 241, 240);
 }
+.mb-3{
+    display:none;
+}
 .clicked{
     background-color: rgb(156, 255, 156);
 }
@@ -31,6 +34,7 @@
     min-height: 80vh;
     border: 2px solid rgb(149, 142, 142);
     border-radius: 10px;
+    width: 350px;
 }
 .itemName{
     margin-top: 10px;
@@ -40,6 +44,9 @@
 .price{
     float: right;
     margin-right: 200;
+}
+.link{
+    margin: 0 20px
 }
 @media screen and (min-width: 576px) {
     .checkout{

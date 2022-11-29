@@ -10,13 +10,13 @@ export default function LoginBtn({ children }) {
 
     return (
       <>
+      {children}
         {/*session.user.name*/}
         {/* <UserInformation data={session.user} /> */}
         <button onClick={() => signOut({
           callbackUrl: `${window.location.origin}`
         }
       )} className="sign-button">Sign out</button>
-        {children}
       </>
     );
   }

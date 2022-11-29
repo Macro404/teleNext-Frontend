@@ -7,9 +7,10 @@ import Image from 'next/image';
 
 const stripe = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY);
 
-export default function Payment({amount, productIds}) {
+export default function Payment({amount, productIds, userId}) {
   const [clientSecret, setClientSecret] = useState('');
   const [paymentIntent, setPaymentIntent] = useState('');
+  console.log(userId);
   useEffect(() => {
     // Create PaymentIntent as soon as the page loads using our local API
     fetch('api/stripe_intent', {
@@ -56,7 +57,7 @@ export default function Payment({amount, productIds}) {
       </div>
       {clientSecret && (
         <Elements options={options} stripe={stripe}>
-          <CheckoutForm paymentIntent={paymentIntent} amount={amount} productIds={productIds}/>
+          <CheckoutForm paymentIntent={paymentIntent} amount={amount} productIds={productIds} userId={userId}/>
         </Elements>
       )}
     </div>

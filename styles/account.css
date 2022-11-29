@@ -1,10 +1,73 @@
 
+.account-container{
+  width: 350px;
+  justify-self: center;
+  justify-items: center;
 
-.subscription{
-  background-color: #66cec0;
-  border: solid 2px black;
 }
-.transaction_history{
+.subscription-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 2px solid black;
+}
+.subscription-card{
+  
+  border: solid 2px black;
+  padding-right: 8px;
+  padding-left: 8px;
+  padding-top: 2px;
+  border-radius: 10px;
+  margin: 3px;
+}
+.subscription-data, .subscription-rate{
+  text-align: right;
+}
+.transaction-history{
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
+}
+.history_title{
+  font-weight: bold;
+}
+.delete-button{
+  position: relative;
+  bottom: 0px;
+}
+.transaction_amount{
+  float: right;
+}
+@media screen and (min-width: 576px){
+
+  .account-container{
+    width: 500px;
+  }
+}
+@media screen and (min-width: 768px){
+
+  .account-container{
+    width: 600px;
+  }
+  .subscription-container{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 992px){
+
+  .account-container{
+    width: 700px;
+  }
+  .subscription-container{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1200px){
+
+  .account-container{
+    width: 800px;
+  }
+  .subscription-container{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }

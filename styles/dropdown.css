@@ -2,8 +2,63 @@
     position: relative;
     text-decoration: none;
     color:white;
-    background-color: black;
+    width: 130px;
+    cursor: pointer;
+    padding:5px;
+    height: 40px;
+    text-align: center;
+}
+.dropdown-link:hover{
+    background-color: rgb(49, 48, 47);
+    
 }
 .dropdown-menu{
     background-color:black;
+    position: relative;
+    width: 130px;
+}
+Menu :active{
+    background-color: black;
+    height:70px;
+}
+.dropdown-menu button{
+    color:white;
+    background-color: black;
+    font-weight: bold;
+    width:130px;
+    height: 70px;
+    margin:auto;
+    font-size: 18px;
+    border:none;
+    border-left: 3px;
+    border-right: 3px;
+    border-top: 0;
+    border-bottom: 0;
+    border-style: solid;
+    border-color:#66cec0;
+}
+.dropdown-menu button:hover{
+    background-color: rgb(37, 37, 37);
+}
+.dropdown-menu div{
+    background-color: black;
+    border:3px solid #66cec0;
+    border-top: none;
+    height: fit-content;
+}
+
+
+@media screen and (min-width: 576px) {
+    
+}
+@media screen and (min-width: 768px) {
+    
+}
+@media screen and (min-width: 992px) {
+    .dropdown-menu{
+        display:none;
+    }
+}
+@media screen and (min-width: 1200px) {
+    
 }

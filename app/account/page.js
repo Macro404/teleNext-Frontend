@@ -26,10 +26,12 @@ export default function Account(){
       setData(data)
       setLoading(false)
       setSubsciptions(data.subscriptionList.map(subscription => {
-        return <Subscription key={uuidv4} subscription={subscription}/>
+        const id = uuidv4();
+        return <Subscription key={id} subscription={subscription}/>
       }))
       setTransactions(data.transactionList.map(transaction => {
-         return <Transaction key={uuidv4} transaction={transaction}/>
+        const id = uuidv4();
+         return <Transaction key={id} transaction={transaction}/>
       }))
       console.log(data)
   })}
@@ -72,10 +74,12 @@ export default function Account(){
   if(status === 'authenticated'){
     return (
       <div>
-        <section className="subscription_table">{Subscriptions}</section>
-        <section className="transaction_history">{Transactions}</section>
-        <p> Welcome {session.user.email}</p>
-        <button onClick={deleteUser}>Delete user</button>
+      <div className="account-container">
+        <section className="subscription-container">{Subscriptions}</section>
+        <p className="history_title">Payment history:</p>
+        <section className="transaction-history">{Transactions}</section>
+      </div>
+      <button className="delete-button" onClick={deleteUser}>Delete user</button>
       </div>
     )
   }
