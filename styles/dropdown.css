@@ -1,0 +1,9 @@
+.dropdown-link{
+    position: relative;
+    text-decoration: none;
+    color:white;
+    background-color: black;
+}
+.dropdown-menu{
+    background-color:black;
+}

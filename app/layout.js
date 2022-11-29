@@ -3,6 +3,7 @@ import '../styles/layout.css'
 import LoginBtn from "./(components)/LoginBtn";
 import Providers from "./(components)/Providers";
 import Image from "next/image";
+import Dropdown from "./(components)/Dropdown";
 
 export default function RootLayout({ children}) {
 
@@ -28,13 +29,14 @@ export default function RootLayout({ children}) {
             <h1>FAQ</h1>
             </Link>
             <LoginBtn>
-              <Link href='/account' className="account-link link">
+              <Link href='/account' className="account-link">
                 <h1>My page</h1>
             </Link>
             </LoginBtn>
-            <Link href='/checkout' className="checkout-link link">
+            <Link href='/checkout' className="checkout-link">
               <Image src="/shopping-cart.png" width={40} height={40} alt="Shopping cart" className="shopping-cart-image"/>
             </Link>
+            <Dropdown/>
             </nav>
             
             <main className="main-container">

@@ -18,11 +18,13 @@ body{
   top:0;
   z-index: 1;
   background-color: #262424;
+  height: 70px;
 }
 .link{
   margin:0 10px;
   text-decoration: none;
   color:white;
+  display:none;
 }
 .link :hover{
   color: #b0eff0;

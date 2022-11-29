@@ -1,0 +1,10 @@
+
+
+.subscription{
+  background-color: #66cec0;
+  border: solid 2px black;
+}
+.transaction_history{
+  display: flex;
+  flex-direction: column;
+}
