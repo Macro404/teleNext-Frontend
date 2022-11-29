@@ -1,9 +1,11 @@
 "use client"
 import { useSession } from "next-auth/react";
 import { useRef } from "react";
+import { useRouter } from 'next/navigation';
 
 export default function SignUp(){
     const { data: session } = useSession();
+    const router = useRouter();
 
     const nameRef = useRef('');
     const emailRef = useRef('');
@@ -29,7 +31,7 @@ export default function SignUp(){
                 'web_token': process.env.JWT_SECRET
             }
         });
-        console.log(process.env.JWT_SECRET);
+        router.push('/checkout')
     }
 
     if(session){

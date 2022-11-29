@@ -24,7 +24,7 @@ export default function Checkout (){
     });
   }
   else{
-    fetch(`http://localhost:8080/api/users/${session.user.email}`,
+    fetch(`https://doubleshot-app.azurewebsites.net/api/users/${session.user.email}`,
     {
       headers: {
         'web_token' : process.env.JWT_SECRET
