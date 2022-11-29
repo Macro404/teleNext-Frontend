@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Elements } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
 import CheckoutForm from './form';
+import Image from 'next/image';
 
 const stripe = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY);
 
@@ -50,7 +51,7 @@ export default function Payment({amount, productIds}) {
           +
         </div>
         <div className="w-1/3 flex justify-end items-center">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg" alt="Stripe" />
+          <Image src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg" width={110} height={55} alt="Stripe" />
         </div>
       </div>
       {clientSecret && (

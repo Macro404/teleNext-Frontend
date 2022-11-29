@@ -86,7 +86,7 @@ export default function Form({paymentIntent, amount, productIds}) {
     const { error } = await stripe.confirmPayment({
       elements,
       confirmParams: {
-        return_url: `${process.env.NEXTAUTH_URL}/mypage`,
+        return_url: `${process.env.NEXTAUTH_URL}/account`,
         receipt_email: email,
         shipping: {
           address: { city: 'NY' },

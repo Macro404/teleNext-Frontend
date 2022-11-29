@@ -2,7 +2,7 @@ import Link from "next/link";
 import '../styles/layout.css'
 import LoginBtn from "./(components)/LoginBtn";
 import Providers from "./(components)/Providers";
-import Cart from "./(components)/Cart";
+import Image from "next/image";
 
 export default function RootLayout({ children}) {
 
@@ -33,7 +33,7 @@ export default function RootLayout({ children}) {
             </Link>
             </LoginBtn>
             <Link href='/checkout' className="checkout-link link">
-              <h1>Checkout</h1>
+              <Image src="/shopping-cart.png" width={40} height={40} alt="Shopping cart" className="shopping-cart-image"/>
             </Link>
             </nav>
             

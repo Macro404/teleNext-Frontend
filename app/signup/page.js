@@ -2,6 +2,7 @@
 import { useSession } from "next-auth/react";
 import { useRef } from "react";
 import { useRouter } from 'next/navigation';
+import '../../styles/signup.css'
 
 export default function SignUp(){
     const { data: session } = useSession();
@@ -35,21 +36,23 @@ export default function SignUp(){
     }
 
     if(session){
-        return <form onSubmit={signUp}>
-            <input type ="text" value={session.user.name} disabled ref={nameRef}></input>
-            <input type ="text" value={session.user.email} disabled ref={emailRef}></input>
-            <input type ="text" placeholder="Address" ref={addressRef}></input>
-            <input type ="text" placeholder="Phone Number" ref={phoneNumberRef}></input>
-            <input type ="text" placeholder="Personal Number" ref={personalNumberRef}></input>
-            <input type="submit" value="Sign up"></input>
+        return <form onSubmit={signUp} className="signup-container">
+            <input type ="text" value={session.user.name} ref={nameRef} className="signup-input" disabled ></input>
+            <input type ="text" value={session.user.email} ref={emailRef} className="signup-input" disabled ></input>
+            <input type ="text" placeholder="Address" ref={addressRef} className="signup-input"></input>
+            <input type ="text" placeholder="Phone Number" ref={phoneNumberRef} className="signup-input"></input>
+            <input type ="text" placeholder="Personal Number" ref={personalNumberRef} className="signup-input"></input>
+            <input type="submit" value="Sign up" className="signup-button"></input>
         </form>
     }
-    return <form onSubmit={signUp}>
-        <input type ="text" placeholder="name" ref={nameRef}></input>
-        <input type ="text" placeholder="name" ref={emailRef}></input>
-        <input type ="text" placeholder="Address" ref={addressRef}></input>
-        <input type ="text" placeholder="Phone Number" ref={phoneNumberRef}></input>
-        <input type ="text" placeholder="Personal Number" ref={personalNumberRef}></input>
-        <input type="submit" value="Sign up"></input>
-    </form>
+    return <form></form>
+    
+    /*<form onSubmit={signUp} className="signup-container">
+        <input type ="text" placeholder="name" ref={nameRef} className="signup-input"></input>
+        <input type ="text" placeholder="name" ref={emailRef} className="signup-input"></input>
+        <input type ="text" placeholder="Address" ref={addressRef} className="signup-input"></input>
+        <input type ="text" placeholder="Phone Number" ref={phoneNumberRef} className="signup-input"></input>
+        <input type ="text" placeholder="Personal Number" ref={personalNumberRef} className="signup-input"></input>
+        <input type="submit" value="Sign up" className="signup-button"></input>
+    </form>*/
 }

@@ -68,6 +68,19 @@ footer{
   text-align: right;
 }
 
+.sign-button{
+  padding: 0 20px;
+  border-radius: 20px;
+  border:none;
+  font-weight: bold;
+  font-size: 16px;
+  background-color: rgb(75, 73, 73);
+  color:#b8e0db;
+}
+.shopping-cart-image{
+  margin-top:10px;
+}
+
 @media screen and (min-width: 576px) {
   .dataplans-container{
     display: flex;
@@ -77,11 +90,6 @@ footer{
     display: flex;
     width: 350px;
   }
-}
-.sign-button{
-  background-color: #e5eaea;
-  border-radius: 20px;
-  padding: 0 40px;
 }
 
 @media screen and (min-width: 768px) {
