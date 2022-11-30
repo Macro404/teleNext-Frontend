@@ -12,6 +12,7 @@ import '../../styles/account.css'
 
 
 
+
 export default function Account(){
   const {data: session, status } = useSession({required: true});
   const [userData, setData] = useState(null);

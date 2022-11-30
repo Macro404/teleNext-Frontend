@@ -19,8 +19,13 @@
   border-radius: 10px;
   margin: 3px;
 }
-.subscription-data, .subscription-rate{
+.subscription-data{
   text-align: right;
+
+}
+.subscription-rate{
+  display: flex;
+  justify-content: space-between;
 }
 .transaction-history{
   margin-top: 20px;
@@ -33,9 +38,13 @@
 .delete-button{
   position: relative;
   bottom: 0px;
+  margin: 5px;
 }
 .transaction_amount{
   float: right;
+}
+.deleted {
+  display: none;
 }
 @media screen and (min-width: 576px){
 
@@ -65,7 +74,7 @@
 @media screen and (min-width: 1200px){
 
   .account-container{
-    width: 800px;
+    width: 900px;
   }
   .subscription-container{
     grid-template-columns: 1fr 1fr 1fr 1fr;
