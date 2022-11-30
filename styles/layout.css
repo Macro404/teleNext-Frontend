@@ -45,13 +45,13 @@ body{
 .dataplans-container{
   display: flex;
   flex-direction: column;
-  width: 300px;
+  width: 90vw;
   justify-content: center;
 }
 .phones-container{
   display: flex;
   flex-direction: column;
-  width: 300px;
+  width: 90vw;
   justify-content: center;
 }
 
@@ -95,23 +95,15 @@ footer{
 
 @media screen and (min-width: 576px) {
   .dataplans-container{
-    display: flex;
-    width: 350px;
   }
   .phones-container{
-    display: flex;
-    width: 350px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .dataplans-container{
-    display: flex;
-    width: 500px;
   }
   .phones-container{
-    display: flex;
-    width: 500px;
   }
   footer{
     height: 60px;

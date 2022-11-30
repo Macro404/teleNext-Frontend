@@ -1,5 +1,6 @@
 .dataplan-container{
-    padding:5px;
+    font-size: 25px;
+    padding:0 90px 10px;
     margin:10px;
     border-radius: 100px;
     background-color: aliceblue;
@@ -13,7 +14,12 @@
     
 }
 @media screen and (min-width: 992px) {
-    
+    .dataplan-container{
+        font-size: 18px;
+        padding:5px;
+        margin:10px;
+        border-radius: 100px;
+    }
 }
 @media screen and (min-width: 1200px) {
     
