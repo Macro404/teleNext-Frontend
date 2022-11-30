@@ -1,7 +1,5 @@
 import NextAuth from "next-auth/next";
 import GoogleProvider from "next-auth/providers/google";
-import { useSession } from "next-auth/react";
-import { headers } from "../../../next.config";
 
 export default NextAuth({
   providers: [

@@ -3,8 +3,6 @@
 import React from "react";
 import {useSession, signOut, getSession} from 'next-auth/react';
 import { useState, useEffect } from "react";
-import Link from "next/link";
-import { env } from "../../next.config";
 import Subscription from "../(components)/Subscription";
 import Transaction from "../(components)/Transaction";
 import { v4 as uuidv4 } from 'uuid'
@@ -58,20 +56,7 @@ export default function Account(){
   if(userData){
     
   }
-    
- // let Subscriptions;
- //let Transactions;
-  // const userData = fetchUserData(session.user.email);
-  
-  // const populateData = () => {
-  //   userData.then((res) => {
-  //   Subscriptions = res.subscriptionList.map(subscription => {
-  //     <Subscription subscription={subscription}/>
-  //   Transactions = res.transactionList.map(transaction => {
-  //     <Transaction transaction={transaction}/>
-  //   }));
-  // }
-  // populateData();
+
   if(status === 'authenticated'){
     return (
       <div>

@@ -7,7 +7,7 @@ import {
 import { useSession} from "next-auth/react";
 
 const requestFromApi = (productIds, userId) => {
-  fetch(`http://localhost:8080/api/users/${userId}/transactions`, {
+  fetch(`https://doubleshot-app.azurewebsites.net/api/users/${userId}/transactions`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json',
                 'web_token' : process.env.JWT_SECRET },

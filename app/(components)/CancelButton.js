@@ -4,7 +4,7 @@ import '../../styles/cart.css'
 export default function CancelButton({subscriptionId, subRef}){
 
   const cancelSubscription = () => {
-    fetch(`http://localhost:8080/api/subscriptions/${subscriptionId}`, {
+    fetch(`https://doubleshot-app.azurewebsites.net/api/subscriptions/${subscriptionId}`, {
         method: 'DELETE',
         headers: {
           'web_token': process.env.JWT_SECRET

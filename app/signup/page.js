@@ -47,12 +47,4 @@ export default function SignUp(){
     }
     return <form></form>
     
-    /*<form onSubmit={signUp} className="signup-container">
-        <input type ="text" placeholder="name" ref={nameRef} className="signup-input"></input>
-        <input type ="text" placeholder="name" ref={emailRef} className="signup-input"></input>
-        <input type ="text" placeholder="Address" ref={addressRef} className="signup-input"></input>
-        <input type ="text" placeholder="Phone Number" ref={phoneNumberRef} className="signup-input"></input>
-        <input type ="text" placeholder="Personal Number" ref={personalNumberRef} className="signup-input"></input>
-        <input type="submit" value="Sign up" className="signup-button"></input>
-    </form>*/
 }
