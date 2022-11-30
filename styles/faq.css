@@ -2,17 +2,21 @@
     width: 300px;
 }
 .faq-question{
-    margin: 10px;
+    margin: 20px;
 }
 .faq-question :hover{
     cursor: pointer;
 }
-details > summary {
-    list-style: none;
+details{
+    font-size: 20px;
+}
+summary {
+    list-style:inside;
     font-weight: bold;
+    font-size: 24px;
     margin-bottom: 3px;
 }
-details > summary::-webkit-details-marker {
+summary::-webkit-details-marker {
     display: none;
 }
 @media screen and (min-width: 576px) {

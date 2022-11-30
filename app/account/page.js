@@ -65,7 +65,7 @@ export default function Account(){
         <p className="history_title">Payment history:</p>
         <section className="transaction-history">{Transactions}</section>
       </div>
-      <button className="delete-button" onClick={deleteUser}>Delete user</button>
+      <button className="delete-button cart_button" onClick={deleteUser}>Delete user</button>
       </div>
     )
   }

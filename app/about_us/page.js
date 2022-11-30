@@ -3,7 +3,7 @@ export default function AboutUs(){
     return <div className="about-container">
         <h1>About us</h1>
         <article>
-            <p>This is the final project for mob Doubleshot at &lt;/salt&gt;'s Fullstack Java bootcamp in Stockholm.</p>
+            <p>This is the final project for mob Doubleshot consisting of Marcus Westlund (Stockholm) and Michael Vedestig (Oslo) at &lt;/salt&gt;'s Fullstack Java bootcamp.</p>
             <h2>Site features</h2>
             <p>We've built a telecom site featuring products in the form of Phones and subscriptions. We use google validation to enable signups to the page as well as for validating access where necessary.</p>
             <h2>Tech stack</h2>
