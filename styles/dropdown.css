@@ -9,39 +9,32 @@
     text-align: center;
 }
 .dropdown-link:hover{
-    background-color: rgb(49, 48, 47);
-    
+    color:#66cec0;
 }
 .dropdown-menu{
-    background-color:black;
-    position: relative;
+    background-color: #262424;
+    position: absolute;
     width: 130px;
+    right: 0vw;
 }
 Menu :active{
-    background-color: black;
     height:70px;
 }
 .dropdown-menu button{
     color:white;
-    background-color: black;
+    background-color: #262424;
     font-weight: bold;
     width:130px;
     height: 70px;
     margin:auto;
     font-size: 18px;
     border:none;
-    border-left: 3px;
-    border-right: 3px;
-    border-top: 0;
-    border-bottom: 0;
-    border-style: solid;
-    border-color:#66cec0;
 }
 .dropdown-menu button:hover{
-    background-color: rgb(37, 37, 37);
+    cursor: pointer;
 }
 .dropdown-menu div{
-    background-color: black;
+    background-color: #262424;
     border:3px solid #66cec0;
     border-top: none;
     height: fit-content;

@@ -2,12 +2,15 @@
 import { Menu } from '@headlessui/react'
 import Link from "next/link";
 import '../../styles/dropdown.css'
+import Image from 'next/image';
 
 export default function Dropdown() {
   return (
     <div className="dropdown-menu">
     <Menu>
-      <Menu.Button>Menu</Menu.Button>
+      <Menu.Button>
+        <Image src="/menu-icon-2.png" width={50} height={50} alt="Menu icon"/>
+      </Menu.Button>
       <Menu.Items>
       <Menu.Item>
           {({ active }) => (

@@ -13,7 +13,7 @@ body{
   flex-direction: row;
   border-bottom: 4px solid #66cec0;
   width: 100vw;
-  justify-content: center;
+  justify-content: center;  
   position:fixed; 
   top:0;
   z-index: 1;
@@ -28,6 +28,9 @@ body{
 }
 .link :hover{
   color: #b0eff0;
+}
+.home-link{
+  display:inline;
 }
 .main-container{
   display: flex;
@@ -79,11 +82,15 @@ footer{
   background-color: rgb(75, 73, 73);
   color:#b8e0db;
 }
+.sign-button:hover{
+  cursor: pointer;
+}
 .shopping-cart-image{
   margin-top:10px;
 }
 .checkout-link{
-  margin: auto 30px;
+  margin-left: 10px;
+  margin-right: 60px;
 }
 
 @media screen and (min-width: 576px) {
