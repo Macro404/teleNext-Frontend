@@ -60,6 +60,7 @@ export default function Checkout (){
     const phoneIdList = phones.map(item => item.id);
     const planIdList = plans.map(item => item.id);
     const productIds = {phoneIds : phoneIdList, planIds : planIdList};
+    const hardCodedValue = 42069;
     return (
   
     <div className='checkout'>
@@ -69,7 +70,7 @@ export default function Checkout (){
       </div>
       <p>Total: {total}:-</p>
       <p>Monthly rate: {monthlyRate}:-</p>
-      <Payment amount={42069} productIds={productIds} userId={userId}/>
+      <Payment amount={hardCodedValue} productIds={productIds} userId={userId}/>
     </div>
     )
   }

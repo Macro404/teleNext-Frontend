@@ -74,7 +74,7 @@
 @media screen and (min-width: 1200px){
 
   .account-container{
-    width: 900px;
+    width: 800px;
   }
   .subscription-container{
     grid-template-columns: 1fr 1fr 1fr 1fr;
