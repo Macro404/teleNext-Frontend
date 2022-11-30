@@ -3,6 +3,7 @@
   width: 350px;
   justify-self: center;
   justify-items: center;
+  margin-bottom:30px;
 }
 .subscription-container{
   display: grid;

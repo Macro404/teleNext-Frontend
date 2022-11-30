@@ -59,12 +59,10 @@ export default function Account(){
 
   if(status === 'authenticated'){
     return (
-      <div>
       <div className="account-container">
         <section className="subscription-container">{Subscriptions}</section>
         <p className="history_title">Payment history:</p>
         <section className="transaction-history">{Transactions}</section>
-      </div>
       <button className="delete-button cart_button" onClick={deleteUser}>Delete user</button>
       </div>
     )

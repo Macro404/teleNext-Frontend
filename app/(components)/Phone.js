@@ -25,11 +25,11 @@ export default function Phone({ phone }){
     </details>
     <div className='phone-details'>
         <h3>{phone.model}</h3>
-        <p>Display: {phone.screen}</p>
-        <p>Camera: {phone.camera}</p>
-        <p>CPU: {phone.cpu}</p>
-        <p>Battery: {phone.battery}</p>
-        <p>{phone.price}:-</p>
+        <p><b>Display: </b>{phone.screen}</p>
+        <p><b>Camera: </b>{phone.camera}</p>
+        <p><b>CPU: </b>{phone.cpu}</p>
+        <p><b>Battery: </b>{phone.battery}</p>
+        <p><b>{phone.price}:-</b></p>
         <div className='phone-page-cart-button'><CartBtn item={phone}></CartBtn></div>
         </div>
     </div>
