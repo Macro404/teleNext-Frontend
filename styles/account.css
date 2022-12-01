@@ -45,6 +45,9 @@
 .transaction_amount{
   float: right;
 }
+.transaction_description{
+  text-align: center;
+}
 .deleted {
   display: none;
 }

@@ -21,7 +21,7 @@ export default function Checkout (){
   if (!session){
 
     signIn({
-      callbackUrl: '/checkout'
+      callbackUrl: 'https://telenext.azurewebsites.net/checkout'
     });
   }
   else{
