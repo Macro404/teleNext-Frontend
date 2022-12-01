@@ -6,7 +6,6 @@
     font-size: 18px;
     font-weight: bold;
     width: max-content;
-    margin: 0 100px 0;
 }
 .cart_button:hover{
     background-color: rgb(144, 252, 176);

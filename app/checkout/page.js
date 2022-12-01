@@ -35,7 +35,7 @@ export default function Checkout (){
         console.log('caught')
         router.push('/signup')
       }
-      return response.json()
+      else return response.json()
     })
     .then(json => setUserId(json.id));
   
@@ -54,9 +54,9 @@ export default function Checkout (){
       return <CartItem key={uuidv4()} item={plan} list={list} setList={setList}/>
     }
     );
-    const total = phones.map((phone) => phone.price).reduce((total, a) => total + a,  0)
+    let total = phones.map((phone) => phone.price).reduce((total, a) => total + a,  0)
     const monthlyRate = plans.map(plan => plan.rate).reduce((total,a) => total + a, 0);
-  
+    total += monthlyRate;
     const phoneIdList = phones.map(item => item.id);
     const planIdList = plans.map(item => item.id);
     const productIds = {phoneIds : phoneIdList, planIds : planIdList};

@@ -9,7 +9,7 @@ export default async function Phones(){
             ></Phone>
     )})
 
-    return <div>
+    return <div className="phone-card-container">
         {phones}
     </div>
 }
