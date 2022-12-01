@@ -14,7 +14,7 @@ export default function SignUp(){
     const phoneNumberRef = useRef('');
     const personalNumberRef = useRef('');
 
-    const signUp = (event) => {
+    const signUp = async (event) => {
         event.preventDefault();
         const User = {
             name: nameRef.current.value,
@@ -23,7 +23,7 @@ export default function SignUp(){
             phoneNumber: phoneNumberRef.current.value,
             personNumber: personalNumberRef.current.value
         }
-        fetch('https://doubleshot-app.azurewebsites.net/api/users',
+        await fetch('https://doubleshot-app.azurewebsites.net/api/users',
         {
             method: 'POST',
             body: JSON.stringify(User),

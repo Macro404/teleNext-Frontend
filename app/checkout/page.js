@@ -21,7 +21,7 @@ export default function Checkout (){
   if (!session){
 
     signIn({
-      callbackUrl: `${window.location.origin}`
+      callbackUrl: '/checkout'
     });
   }
   else{
